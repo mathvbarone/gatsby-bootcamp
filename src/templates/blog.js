@@ -13,11 +13,15 @@ export const query = graphql`
 `
 
 const Blog = ({ data }) => {
+  const {
+    contentfulBlogPost: { title, published },
+  } = data
+
   return (
     <Layout>
       <Link to={"/blog"}>Return</Link>
-      <h1>{data.contentfulBlogPost.title}</h1>
-      <p>{data.contentfulBlogPost.published}</p>
+      <h1>{title}</h1>
+      <p>{published}</p>
     </Layout>
   )
 }
