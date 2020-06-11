@@ -10,6 +10,7 @@ module.exports = {
     author: "Matheus Barone",
   },
   plugins: [
+    "gatsby-plugin-react-helmet",
     {
       resolve: "gatsby-source-contentful",
       options: {
